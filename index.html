@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REAKTIV KUHL | Praxis für Physiotherapie und Osteopathie Meppen</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#fff1f2',
+                            100: '#ffe4e6',
+                            600: '#c8102e',
+                            700: '#a60c24',
+                        },
+                        dark: {
+                            800: '#1e2d3d',
+                            900: '#0f172a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans">
+
+    <!-- Header / Nav -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 py-2.5 flex items-center justify-between">
+            
+            <!-- Oben links: Bild Kuhl (Team-Foto als Icon/Portrait) + Schriftzug -->
+            <a href="#" class="flex items-center space-x-3 group">
+                <img 
+                    src="team.jpg" 
+                    alt="Ulrich & Ruth Kuhl" 
+                    class="h-10 w-10 md:h-12 md:w-12 rounded-full object-cover border-2 border-brand-600 shadow-sm group-hover:scale-105 transition-transform"
+                    onerror="this.onerror=null; this.src='logo.png';"
+                >
+                <img src="Reaktiv.png" alt="REAKTIV KUHL" class="h-7 md:h-9 w-auto object-contain">
+            </a>
+
+            <!-- Mitte: Menü -->
+            <nav class="hidden md:flex space-x-8 font-semibold text-slate-600 text-sm">
+                <a href="#leistungen" class="hover:text-brand-600 transition">Schwerpunkte</a>
+                <a href="#ueber-uns" class="hover:text-brand-600 transition">Über uns</a>
+                <a href="#kontakt" class="hover:text-brand-600 transition">Kontakt &amp; Anfahrt</a>
+            </nav>
+
+            <!-- Rechts: Telefon Button -->
+            <a href="tel:059318476765" class="bg-brand-600 hover:bg-brand-700 text-white font-bold px-4 py-2 rounded-xl transition shadow-sm flex items-center space-x-2 text-sm">
+                <span>📞</span>
+                <span class="hidden sm:inline">05931 / 84 76 76 5</span>
+            </a>
+
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-b from-slate-100 via-brand-50/20 to-slate-50 py-16 md:py-20 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            
+            <span class="bg-white border border-slate-200 text-dark-800 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest shadow-sm inline-block mb-2">
+                📍 Sophienplatz 25 • 49716 Meppen
+            </span>
+            
+            <h1 class="text-3xl md:text-5xl font-semibold text-dark-900 mt-6 mb-6 leading-tight tracking-normal">
+                Ganzheitliche Gesundheit &amp; Bewegung in Meppen
+            </h1>
+            
+            <p class="text-base md:text-lg text-slate-600 mb-8 max-w-2xl mx-auto font-normal">
+                Willkommen bei <strong class="text-dark-900 font-semibold">REAKTIV KUHL</strong>. Wir begleiten Säuglinge, Kinder und Erwachsene mit spezialisierter Physiotherapie, Osteopathie und individuellen Behandlungsansätzen.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#kontakt" class="bg-brand-600 hover:bg-brand-700 text-white font-semibold px-8 py-3.5 rounded-xl shadow-md hover:shadow-lg transition text-base">
+                    Termin vereinbaren
+                </a>
+                <a href="tel:01601884068" class="bg-white hover:bg-slate-100 text-dark-800 font-semibold px-8 py-3.5 rounded-xl border border-slate-300 transition text-base flex items-center justify-center space-x-2 shadow-sm">
+                    <span>📱</span>
+                    <span>Mobil: 0160 1884068</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schwerpunkte -->
+    <section id="leistungen" class="max-w-6xl mx-auto px-4 py-16">
+        <div class="text-center mb-12">
+            <span class="text-brand-600 font-bold text-xs tracking-widest uppercase">Unsere Expertise</span>
+            <h2 class="text-2xl md:text-3xl font-bold text-dark-900 mt-1 mb-3">Behandlungsschwerpunkte</h2>
+            <div class="w-12 h-1 bg-brand-600 mx-auto rounded-full mb-4"></div>
+            <p class="text-slate-600 max-w-xl mx-auto text-sm">Fundierte Behandlungsformen für den gesamten Bewegungsapparat – individuell abgestimmt.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <!-- Osteopathie -->
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition border-t-4 border-t-brand-600">
+                <div class="w-10 h-10 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center mb-4 text-xl font-bold">🌿</div>
+                <h3 class="text-lg font-bold text-dark-900 mb-2">Osteopathie</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">Ganzheitliche Befundung und Behandlung, um Einschränkungen und Blockaden im Körper aufzuspüren und Selbstheilungskräfte zu aktivieren.</p>
+            </div>
+
+            <!-- Manuelle Therapie -->
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition border-t-4 border-t-dark-800">
+                <div class="w-10 h-10 bg-slate-100 text-dark-800 rounded-xl flex items-center justify-center mb-4 text-xl font-bold">🛠️</div>
+                <h3 class="text-lg font-bold text-dark-900 mb-2">Manuelle Therapie</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">Gezielte Handgriffe und Mobilisationstechniken zur Linderung von Gelenk- und Rückenbeschwerden sowie Bewegungsstörungen.</p>
+            </div>
+
+            <!-- KG - ZNS / Bobath -->
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition border-t-4 border-t-brand-600">
+                <div class="w-10 h-10 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center mb-4 text-xl font-bold">👶</div>
+                <h3 class="text-lg font-bold text-dark-900 mb-2">KG – ZNS / Bobath</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">Neurologische Krankengymnastik nach dem Bobath-Konzept – spezialisiert <strong class="text-dark-900 font-semibold">für Säuglinge, Kinder und Erwachsene</strong>.</p>
+            </div>
+
+            <!-- Skoliose Therapy -->
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition border-t-4 border-t-dark-800">
+                <div class="w-10 h-10 bg-slate-100 text-dark-800 rounded-xl flex items-center justify-center mb-4 text-xl font-bold">🦴</div>
+                <h3 class="text-lg font-bold text-dark-900 mb-2">Skoliose Therapie (Schroth)</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">Dreidimensionale Skoliosebehandlung nach Katharina Schroth zur gezielten Korrektur und Aufrichtung der Wirbelsäule.</p>
+            </div>
+
+            <!-- CMD / Kiefergelenk -->
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition border-t-4 border-t-brand-600">
+                <div class="w-10 h-10 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center mb-4 text-xl font-bold">🦷</div>
+                <h3 class="text-lg font-bold text-dark-900 mb-2">Kiefergelenktherapie (CMD)</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">Therapie bei Funktionsstörungen des Kiefergelenks, Zähneknirschen, Kopfschmerzen und Nackenverspannungen.</p>
+            </div>
+
+            <!-- Sportphysiotherapie -->
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition border-t-4 border-t-dark-800">
+                <div class="w-10 h-10 bg-slate-100 text-dark-800 rounded-xl flex items-center justify-center mb-4 text-xl font-bold">🏃</div>
+                <h3 class="text-lg font-bold text-dark-900 mb-2">Sportphysiotherapie</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">Gezielte Prävention, Rehabilitation und Betreuung von Sportlern für eine sichere und schnelle Rückkehr zur Leistungsfähigkeit.</p>
+            </div>
+
+        </div>
+
+        <div class="mt-10 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+            <h4 class="font-bold text-dark-900 mb-4 text-center text-sm">Weitere Spezialisierungen in unserer Praxis:</h4>
+            <div class="flex flex-wrap justify-center gap-2">
+                <span class="bg-slate-100 text-slate-700 text-xs font-medium px-3 py-1.5 rounded-lg border border-slate-200">MLD – Lymphdrainage</span>
+                <span class="bg-slate-100 text-slate-700 text-xs font-medium px-3 py-1.5 rounded-lg border border-slate-200">Massagen</span>
+                <span class="bg-slate-100 text-slate-700 text-xs font-medium px-3 py-1.5 rounded-lg border border-slate-200">Dorn – Hock – Therapie</span>
+                <span class="bg-slate-100 text-slate-700 text-xs font-medium px-3 py-1.5 rounded-lg border border-slate-200">WS – Behandlung</span>
+                <span class="bg-slate-100 text-slate-700 text-xs font-medium px-3 py-1.5 rounded-lg border border-slate-200">Kinesio – Tape</span>
+                <span class="bg-brand-50 text-brand-700 border border-brand-100 text-xs font-semibold px-3 py-1.5 rounded-lg">🏡 Hausbesuche auf Anfrage</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Über uns -->
+    <section id="ueber-uns" class="bg-white py-16 border-y border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+            
+            <div class="bg-slate-100 p-2 rounded-2xl border border-slate-200 shadow-sm">
+                <img 
+                    src="team.jpg" 
+                    alt="Ulrich Kuhl und Ruth Kuhl - REAKTIV KUHL Meppen" 
+                    class="w-full h-72 object-cover rounded-xl"
+                    onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'h-72 bg-slate-100 rounded-xl flex flex-col items-center justify-center text-slate-400 p-6 text-center\'><span class=\'text-3xl mb-2\'>📸</span><span class=\'text-xs font-medium text-slate-500\'>Foto als team.jpg im selben Ordner speichern</span></div>';"
+                >
+            </div>
+
+            <div>
+                <span class="text-brand-600 font-bold text-xs tracking-widest uppercase">Persönlich &amp; Erfahren</span>
+                <h2 class="text-2xl font-bold text-dark-900 mt-1 mb-4">Willkommen bei REAKTIV KUHL</h2>
+                <p class="text-slate-600 mb-6 leading-relaxed text-sm">
+                    In unserer Praxis am Sophienplatz verbinden wir – <strong class="text-dark-900 font-semibold">Ulrich &amp; Ruth Kuhl</strong> – jahrelange therapeutische Erfahrung mit modernsten Ansätzen aus Physiotherapie und Osteopathie. Unser Ziel ist es, nicht nur Symptome zu behandeln, sondern die Ursachen ganzheitlich anzugehen.
+                </p>
+                <ul class="space-y-2.5 text-sm text-slate-700 font-medium">
+                    <li class="flex items-center space-x-3">
+                        <span class="w-5 h-5 rounded-full bg-brand-50 text-brand-600 flex items-center justify-center text-xs font-bold">✓</span>
+                        <span>Spezialisiert auf Säuglinge, Kinder &amp; Erwachsene</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <span class="w-5 h-5 rounded-full bg-brand-50 text-brand-600 flex items-center justify-center text-xs font-bold">✓</span>
+                        <span>Verbindung von Physiotherapie &amp; Osteopathie</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <span class="w-5 h-5 rounded-full bg-brand-50 text-brand-600 flex items-center justify-center text-xs font-bold">✓</span>
+                        <span>Zentrale Praxis am Sophienplatz 25 in Meppen</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontakt & Zeiten -->
+    <section id="kontakt" class="max-w-6xl mx-auto px-4 py-16">
+        <div class="grid md:grid-cols-2 gap-10">
+            <!-- Info Card -->
+            <div class="bg-dark-900 text-white p-8 rounded-2xl flex flex-col justify-between shadow-lg">
+                <div>
+                    <div class="mb-6">
+                        <img src="Reaktiv.png" alt="REAKTIV KUHL" class="h-7 w-auto filter brightness-0 invert">
+                    </div>
+
+                    <p class="text-slate-400 text-xs mb-6 font-medium">Praxis für Physiotherapie und Osteopathie</p>
+                    
+                    <div class="space-y-4 text-slate-300 text-sm font-medium">
+                        <p class="flex items-start space-x-3">
+                            <span>📍</span>
+                            <span><strong>Sophienplatz 25</strong><br>49716 Meppen</span>
+                        </p>
+                        <p class="flex items-center space-x-3">
+                            <span>📞</span>
+                            <span><strong>Telefon:</strong> 05931 / 84 76 76 5</span>
+                        </p>
+                        <p class="flex items-center space-x-3">
+                            <span>📱</span>
+                            <span><strong>Mobil:</strong> 0160 1884068</span>
+                        </p>
+                        <p class="flex items-center space-x-3">
+                            <span>✉️</span>
+                            <span><strong>E-Mail:</strong> info@reaktiv-kuhl.de</span>
+                        </p>
+                    </div>
+
+                    <hr class="border-slate-800 my-6">
+                    <h3 class="font-bold text-white text-sm mb-1">Termine nach Vereinbarung</h3>
+                    <p class="text-xs text-slate-400">Rufen Sie uns gerne an oder nutzen Sie das Kontaktformular, um Ihren Behandlungstermin zu vereinbaren.</p>
+                </div>
+            </div>
+
+            <!-- Formular -->
+            <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
+                <h3 class="text-xl font-bold text-dark-900 mb-1">Terminanfrage senden</h3>
+                <p class="text-slate-500 text-xs mb-6">Schreiben Sie uns – wir melden uns schnellstmöglich bei Ihnen.</p>
+                <form class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Name</label>
+                        <input type="text" class="w-full px-4 py-2.5 border border-slate-300 rounded-xl focus:ring-2 focus:ring-brand-600 focus:outline-none transition text-sm" placeholder="Ihr Vor- und Nachname">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Telefon / E-Mail</label>
+                        <input type="text" class="w-full px-4 py-2.5 border border-slate-300 rounded-xl focus:ring-2 focus:ring-brand-600 focus:outline-none transition text-sm" placeholder="Wie können wir Sie am besten erreichen?">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Anliegen / Wunschbehandlung</label>
+                        <textarea rows="3" class="w-full px-4 py-2.5 border border-slate-300 rounded-xl focus:ring-2 focus:ring-brand-600 focus:outline-none transition text-sm" placeholder="z. B. Osteopathie, Säuglings-Bobath, Skoliose..."></textarea>
+                    </div>
+                    <button type="button" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-3 rounded-xl transition shadow-sm text-sm">
+                        Anfrage abschicken
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-6 text-center text-slate-500 text-xs">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4 font-medium">
+            <p>© 2026 REAKTIV KUHL – Praxis für Physiotherapie und Osteopathie, Meppen.</p>
+            <div class="space-x-4">
+                <a href="#" class="hover:text-brand-600 transition">Impressum</a>
+                <a href="#" class="hover:text-brand-600 transition">Datenschutz</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
