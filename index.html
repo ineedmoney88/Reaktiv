@@ -40,7 +40,17 @@
     <header class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
         <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
             
-            <!-- Links: Navigation & Anruf-Button -->
+            <!-- Links: Logo (kleiner & links) -->
+            <a href="#" class="flex items-center">
+                <img 
+                    src="Kuhl.png" 
+                    alt="REAKTIV KUHL - Praxis für Physiotherapie und Osteopathie" 
+                    class="h-9 w-auto object-contain"
+                    onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'text-left\'><div class=\'text-lg font-bold tracking-wider text-slate-900\'><span class=\'text-brand-600\'>REAKTIV</span> KUHL</div><div class=\'text-[8px] font-semibold text-slate-500 uppercase tracking-widest\'>Physiotherapie &amp; Osteopathie</div></div>';"
+                >
+            </a>
+
+            <!-- Rechts: Navigation & Anruf-Button -->
             <div class="flex items-center space-x-6">
                 <nav class="hidden md:flex space-x-6 font-semibold text-slate-600 text-sm">
                     <a href="#leistungen" class="hover:text-brand-600 transition">Schwerpunkte</a>
@@ -53,16 +63,6 @@
                     <span>05931 / 84 76 76 5</span>
                 </a>
             </div>
-
-            <!-- Rechts: Logo -->
-            <a href="#" class="flex items-center">
-                <img 
-                    src="Kuhl.png" 
-                    alt="REAKTIV KUHL - Praxis für Physiotherapie und Osteopathie" 
-                    class="h-12 w-auto object-contain"
-                    onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'text-right\'><div class=\'text-xl font-bold tracking-wider text-slate-900\'><span class=\'text-brand-600\'>REAKTIV</span> KUHL</div><div class=\'text-[9px] font-semibold text-slate-500 uppercase tracking-widest\'>Physiotherapie &amp; Osteopathie</div></div>';"
-                >
-            </a>
 
         </div>
     </header>
@@ -189,12 +189,12 @@
                 </div>
             </div>
 
-            <!-- Galerie (Wiederhergestellt) -->
+            <!-- Galerie (Einheitliches Seitenverhältnis) -->
             <div class="grid md:grid-cols-3 gap-6">
                 
                 <!-- Bild 1: Eingang -->
                 <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition">
-                    <div class="h-64 bg-slate-100 overflow-hidden">
+                    <div class="aspect-[4/3] bg-slate-100 overflow-hidden">
                         <img 
                             src="Eingang.jpg" 
                             alt="Empfangsbereich REAKTIV KUHL" 
@@ -202,14 +202,14 @@
                             onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'h-full flex items-center justify-center text-xs text-slate-400 p-4 text-center\'>📸 Eingang.jpg fehlt</div>';"
                         >
                     </div>
-                    <div class="p-4 text-center border-t border-slate-100">
+                    <div class="p-3 text-center border-t border-slate-100">
                         <p class="font-bold text-dark-900 text-sm">Empfang</p>
                     </div>
                 </div>
 
                 <!-- Bild 2: Wartebereich -->
                 <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition">
-                    <div class="h-64 bg-slate-100 overflow-hidden">
+                    <div class="aspect-[4/3] bg-slate-100 overflow-hidden">
                         <img 
                             src="Wartebereich.jpg" 
                             alt="Wartebereich REAKTIV KUHL" 
@@ -217,22 +217,22 @@
                             onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'h-full flex items-center justify-center text-xs text-slate-400 p-4 text-center\'>📸 Wartebereich.jpg fehlt</div>';"
                         >
                     </div>
-                    <div class="p-4 text-center border-t border-slate-100">
+                    <div class="p-3 text-center border-t border-slate-100">
                         <p class="font-bold text-dark-900 text-sm">Wartebereich</p>
                     </div>
                 </div>
 
-                <!-- Bild 3: Deko -->
+                <!-- Bild 3: Deko (Fokus nach oben gesetzt) -->
                 <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition">
-                    <div class="h-64 bg-slate-100 overflow-hidden">
+                    <div class="aspect-[4/3] bg-slate-100 overflow-hidden">
                         <img 
                             src="Deko.jpg" 
                             alt="Praxisdetails REAKTIV KUHL" 
-                            class="w-full h-full object-cover"
+                            class="w-full h-full object-cover object-top"
                             onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'h-full flex items-center justify-center text-xs text-slate-400 p-4 text-center\'>📸 Deko.jpg fehlt</div>';"
                         >
                     </div>
-                    <div class="p-4 text-center border-t border-slate-100">
+                    <div class="p-3 text-center border-t border-slate-100">
                         <p class="font-bold text-dark-900 text-sm">Praxisdetails</p>
                     </div>
                 </div>
