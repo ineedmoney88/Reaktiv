@@ -189,16 +189,16 @@
                 </div>
             </div>
 
-            <!-- Galerie (Genau 2 Bilder mit Hover-Bewegung & Zoom-Effekt) -->
+            <!-- Galerie (Gestochen scharf mit GPU-beschleunigtem Hover) -->
             <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                 
                 <!-- Bild 1: Empfang -->
-                <div class="group bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 ease-out cursor-pointer">
-                    <div class="h-64 sm:h-72 bg-slate-100 overflow-hidden">
+                <div class="group bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ease-out transform-gpu">
+                    <div class="h-64 sm:h-72 bg-slate-100 overflow-hidden relative">
                         <img 
                             src="Eingang.jpg" 
                             alt="Empfangsbereich REAKTIV KUHL" 
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out transform-gpu [backface-visibility:hidden]"
                             onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'h-full flex items-center justify-center text-xs text-slate-400 p-4 text-center\'>📸 Eingang.jpg fehlt</div>';"
                         >
                     </div>
@@ -208,12 +208,12 @@
                 </div>
 
                 <!-- Bild 2: Wartebereich -->
-                <div class="group bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 ease-out cursor-pointer">
-                    <div class="h-64 sm:h-72 bg-slate-100 overflow-hidden">
+                <div class="group bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ease-out transform-gpu">
+                    <div class="h-64 sm:h-72 bg-slate-100 overflow-hidden relative">
                         <img 
                             src="Wartebereich.jpg" 
                             alt="Wartebereich REAKTIV KUHL" 
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out transform-gpu [backface-visibility:hidden]"
                             onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'h-full flex items-center justify-center text-xs text-slate-400 p-4 text-center\'>📸 Wartebereich.jpg fehlt</div>';"
                         >
                     </div>
