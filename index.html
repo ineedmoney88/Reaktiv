@@ -21,7 +21,7 @@
                         brand: {
                             50: '#fff1f2',
                             100: '#ffe4e6',
-                            600: '#c8102e',
+                            600: '#c8102e', // Logo-Rot
                             700: '#a60c24',
                         },
                         dark: {
@@ -38,30 +38,30 @@
 
     <!-- Header / Nav -->
     <header class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
-        <div class="max-w-6xl mx-auto px-4 py-2.5 flex items-center justify-between">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
             
-            <!-- Oben links: Bild Kuhl (Team-Foto als Icon/Portrait) + Schriftzug -->
-            <a href="#" class="flex items-center space-x-3 group">
+            <!-- Links: Navigation & Anruf-Button -->
+            <div class="flex items-center space-x-6">
+                <nav class="hidden md:flex space-x-6 font-semibold text-slate-600 text-sm">
+                    <a href="#leistungen" class="hover:text-brand-600 transition">Schwerpunkte</a>
+                    <a href="#ueber-uns" class="hover:text-brand-600 transition">Über uns</a>
+                    <a href="#kontakt" class="hover:text-brand-600 transition">Kontakt &amp; Anfahrt</a>
+                </nav>
+
+                <a href="tel:059318476765" class="bg-brand-600 hover:bg-brand-700 text-white font-bold px-4 py-2 rounded-xl transition shadow-sm flex items-center space-x-2 text-sm">
+                    <span>📞</span>
+                    <span>05931 / 84 76 76 5</span>
+                </a>
+            </div>
+
+            <!-- Rechts: Das Praxis-Logo -->
+            <a href="#" class="flex items-center">
                 <img 
-                    src="team.jpg" 
-                    alt="Ulrich & Ruth Kuhl" 
-                    class="h-10 w-10 md:h-12 md:w-12 rounded-full object-cover border-2 border-brand-600 shadow-sm group-hover:scale-105 transition-transform"
-                    onerror="this.onerror=null; this.src='logo.png';"
+                    src="Kuhl.png" 
+                    alt="REAKTIV KUHL - Praxis für Physiotherapie und Osteopathie" 
+                    class="h-16 md:h-20 w-auto object-contain"
+                    onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'text-right\'><div class=\'text-xl font-bold tracking-wider text-slate-900\'><span class=\'text-brand-600\'>REAKTIV</span> KUHL</div><div class=\'text-[9px] font-semibold text-slate-500 uppercase tracking-widest\'>Physiotherapie &amp; Osteopathie</div></div>';"
                 >
-                <img src="Reaktiv.png" alt="REAKTIV KUHL" class="h-7 md:h-9 w-auto object-contain">
-            </a>
-
-            <!-- Mitte: Menü -->
-            <nav class="hidden md:flex space-x-8 font-semibold text-slate-600 text-sm">
-                <a href="#leistungen" class="hover:text-brand-600 transition">Schwerpunkte</a>
-                <a href="#ueber-uns" class="hover:text-brand-600 transition">Über uns</a>
-                <a href="#kontakt" class="hover:text-brand-600 transition">Kontakt &amp; Anfahrt</a>
-            </nav>
-
-            <!-- Rechts: Telefon Button -->
-            <a href="tel:059318476765" class="bg-brand-600 hover:bg-brand-700 text-white font-bold px-4 py-2 rounded-xl transition shadow-sm flex items-center space-x-2 text-sm">
-                <span>📞</span>
-                <span class="hidden sm:inline">05931 / 84 76 76 5</span>
             </a>
 
         </div>
@@ -70,11 +70,11 @@
     <!-- Hero Section -->
     <section class="bg-gradient-to-b from-slate-100 via-brand-50/20 to-slate-50 py-16 md:py-20 px-4">
         <div class="max-w-4xl mx-auto text-center">
-            
-            <span class="bg-white border border-slate-200 text-dark-800 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest shadow-sm inline-block mb-2">
+            <span class="bg-white border border-slate-200 text-dark-800 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest shadow-sm">
                 📍 Sophienplatz 25 • 49716 Meppen
             </span>
             
+            <!-- Dezentere, elegante Überschrift -->
             <h1 class="text-3xl md:text-5xl font-semibold text-dark-900 mt-6 mb-6 leading-tight tracking-normal">
                 Ganzheitliche Gesundheit &amp; Bewegung in Meppen
             </h1>
@@ -82,7 +82,6 @@
             <p class="text-base md:text-lg text-slate-600 mb-8 max-w-2xl mx-auto font-normal">
                 Willkommen bei <strong class="text-dark-900 font-semibold">REAKTIV KUHL</strong>. Wir begleiten Säuglinge, Kinder und Erwachsene mit spezialisierter Physiotherapie, Osteopathie und individuellen Behandlungsansätzen.
             </p>
-            
             <div class="flex flex-col sm:flex-row justify-center gap-4">
                 <a href="#kontakt" class="bg-brand-600 hover:bg-brand-700 text-white font-semibold px-8 py-3.5 rounded-xl shadow-md hover:shadow-lg transition text-base">
                     Termin vereinbaren
@@ -150,6 +149,7 @@
 
         </div>
 
+        <!-- Weitere Leistungen -->
         <div class="mt-10 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
             <h4 class="font-bold text-dark-900 mb-4 text-center text-sm">Weitere Spezialisierungen in unserer Praxis:</h4>
             <div class="flex flex-wrap justify-center gap-2">
@@ -163,7 +163,7 @@
         </div>
     </section>
 
-   <!-- Über uns & Praxisgalerie -->
+    <!-- Über uns & Praxisgalerie -->
     <section id="ueber-uns" class="bg-white py-16 border-y border-slate-200">
         <div class="max-w-6xl mx-auto px-4">
             
@@ -191,89 +191,39 @@
                 </div>
             </div>
 
-            <!-- Praxis-Galerie (3 Bilder) -->
-            <div class="grid md:grid-cols-3 gap-6">
+            <!-- Praxis-Galerie (Scharfe Bilder ohne Overlays) -->
+            <div class="grid md:grid-cols-3 gap-6 items-start">
                 
-<!-- Über uns & Praxisgalerie -->
-    <section id="ueber-uns" class="bg-white py-16 border-y border-slate-200">
-        <div class="max-w-6xl mx-auto px-4">
-            
-            <!-- Text-Intro -->
-            <div class="max-w-3xl mx-auto text-center mb-12">
-                <span class="text-brand-600 font-bold text-xs tracking-widest uppercase">Persönlich &amp; Erfahren</span>
-                <h2 class="text-2xl md:text-3xl font-bold text-dark-900 mt-1 mb-4">Willkommen bei REAKTIV KUHL</h2>
-                <p class="text-slate-600 leading-relaxed text-sm md:text-base">
-                    In unserer Praxis am Sophienplatz verbinden wir – <strong class="text-dark-900 font-semibold">Ulrich &amp; Ruth Kuhl</strong> – jahrelange therapeutische Erfahrung mit modernsten Ansätzen aus Physiotherapie und Osteopathie. Unser Ziel ist es, nicht nur Symptome zu behandeln, sondern die Ursachen ganzheitlich anzugehen.
-                </p>
-                
-                <div class="flex flex-wrap justify-center gap-6 mt-6 text-sm text-slate-700 font-medium">
-                    <span class="flex items-center space-x-2">
-                        <span class="w-5 h-5 rounded-full bg-brand-50 text-brand-600 flex items-center justify-center text-xs font-bold">✓</span>
-                        <span>Säuglinge, Kinder &amp; Erwachsene</span>
-                    </span>
-                    <span class="flex items-center space-x-2">
-                        <span class="w-5 h-5 rounded-full bg-brand-50 text-brand-600 flex items-center justify-center text-xs font-bold">✓</span>
-                        <span>Physiotherapie &amp; Osteopathie</span>
-                    </span>
-                    <span class="flex items-center space-x-2">
-                        <span class="w-5 h-5 rounded-full bg-brand-50 text-brand-600 flex items-center justify-center text-xs font-bold">✓</span>
-                        <span>Zentral am Sophienplatz 25</span>
-                    </span>
-                </div>
-            </div>
-
-            <!-- Praxis-Galerie (Scharfe Darstellung & Ausrichtung) -->
-            <div class="grid md:grid-cols-3 gap-6 items-stretch">
-                
-                <!-- Bild 1: Empfang / Eingang -->
-                <div class="rounded-2xl overflow-hidden border border-slate-200 bg-slate-50 shadow-sm flex flex-col justify-between">
-                    <div class="aspect-[4/3] w-full overflow-hidden bg-slate-100">
-                        <img 
-                            src="Eingang.jpg" 
-                            alt="Empfang REAKTIV KUHL" 
-                            class="w-full h-full object-cover"
-                            loading="lazy"
-                        >
-                    </div>
-                    <div class="p-4 bg-white border-t border-slate-100 text-center">
-                        <p class="font-bold text-slate-800 text-sm">Empfang</p>
-                    </div>
+                <!-- Bild 1: Eingang -->
+                <div class="rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-md transition">
+                    <img 
+                        src="Eingang.jpg" 
+                        alt="Empfangsbereich REAKTIV KUHL Meppen" 
+                        class="w-full h-auto block"
+                        onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'p-8 bg-slate-100 flex items-center justify-center text-xs text-slate-400 text-center\'>📸 Eingang.jpg fehlt im Ordner</div>';"
+                    >
                 </div>
 
                 <!-- Bild 2: Wartebereich -->
-                <div class="rounded-2xl overflow-hidden border border-slate-200 bg-slate-50 shadow-sm flex flex-col justify-between">
-                    <div class="aspect-[4/3] w-full overflow-hidden bg-slate-100">
-                        <img 
-                            src="Wartebereich.jpg" 
-                            alt="Wartebereich REAKTIV KUHL" 
-                            class="w-full h-full object-cover"
-                            loading="lazy"
-                        >
-                    </div>
-                    <div class="p-4 bg-white border-t border-slate-100 text-center">
-                        <p class="font-bold text-slate-800 text-sm">Wartebereich</p>
-                    </div>
+                <div class="rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-md transition">
+                    <img 
+                        src="Wartebereich.jpg" 
+                        alt="Wartebereich REAKTIV KUHL Meppen" 
+                        class="w-full h-auto block"
+                        onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'p-8 bg-slate-100 flex items-center justify-center text-xs text-slate-400 text-center\'>📸 Wartebereich.jpg fehlt im Ordner</div>';"
+                    >
                 </div>
 
                 <!-- Bild 3: Deko -->
-                <div class="rounded-2xl overflow-hidden border border-slate-200 bg-slate-50 shadow-sm flex flex-col justify-between">
-                    <div class="aspect-[4/3] w-full overflow-hidden bg-slate-100">
-                        <img 
-                            src="Deko.jpg" 
-                            alt="REAKTIV KUHL Holzaufsteller" 
-                            class="w-full h-full object-cover"
-                            loading="lazy"
-                        >
-                    </div>
-                    <div class="p-4 bg-white border-t border-slate-100 text-center">
-                        <p class="font-bold text-slate-800 text-sm">Praxisdetails</p>
-                    </div>
+                <div class="rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-md transition">
+                    <img 
+                        src="Deko.jpg" 
+                        alt="REAKTIV KUHL Holzaufsteller Praxisdeko" 
+                        class="w-full h-auto block"
+                        onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'p-8 bg-slate-100 flex items-center justify-center text-xs text-slate-400 text-center\'>📸 Deko.jpg fehlt im Ordner</div>';"
+                    >
                 </div>
 
-            </div>
-
-        </div>
-    </section>
             </div>
 
         </div>
@@ -285,10 +235,8 @@
             <!-- Info Card -->
             <div class="bg-dark-900 text-white p-8 rounded-2xl flex flex-col justify-between shadow-lg">
                 <div>
-                    <div class="mb-6">
-                        <img src="Reaktiv.png" alt="REAKTIV KUHL" class="h-7 w-auto filter brightness-0 invert">
-                    </div>
-
+                    <span class="text-brand-600 font-bold text-xs tracking-widest uppercase">Kontakt</span>
+                    <h2 class="text-xl font-bold mb-1">REAKTIV KUHL</h2>
                     <p class="text-slate-400 text-xs mb-6 font-medium">Praxis für Physiotherapie und Osteopathie</p>
                     
                     <div class="space-y-4 text-slate-300 text-sm font-medium">
@@ -341,7 +289,7 @@
         </div>
     </section>
 
-	<!-- Footer -->
+    <!-- Footer mit Rechtstexten -->
     <footer class="bg-white border-t border-slate-200 py-6 text-center text-slate-500 text-xs">
         <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4 font-medium">
             <p>© 2026 REAKTIV KUHL – Praxis für Physiotherapie und Osteopathie, Meppen.</p>
