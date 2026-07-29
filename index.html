@@ -36,28 +36,29 @@
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased font-sans">
 
-    <!-- Header / Nav -->
+    <!-- Header / Nav (Zentrierte Menüführung) -->
     <header class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
-        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between md:grid md:grid-cols-3">
             
             <!-- Links: Logo -->
-            <a href="#" class="flex items-center shrink-0">
+            <a href="#" class="flex items-center justify-start shrink-0">
                 <img 
                     src="Kuhl.png" 
                     alt="REAKTIV KUHL - Praxis für Physiotherapie und Osteopathie" 
-                    class="h-8 w-auto object-contain"
-                    onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'text-left\'><div class=\'text-lg font-bold tracking-wider text-slate-900\'><span class=\'text-brand-600\'>REAKTIV</span> KUHL</div><div class=\'text-[8px] font-semibold text-slate-500 uppercase tracking-widest\'>Physiotherapie &amp; Osteopathie</div></div>';"
+                    class="h-12 md:h-14 w-auto object-contain transition-all duration-200"
+                    onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'text-left\'><div class=\'text-xl font-bold tracking-wider text-slate-900\'><span class=\'text-brand-600\'>REAKTIV</span> KUHL</div><div class=\'text-[10px] font-semibold text-slate-500 uppercase tracking-widest\'>Physiotherapie &amp; Osteopathie</div></div>';"
                 >
             </a>
 
-            <!-- Rechts: Navigation & Anruf-Button -->
-            <div class="flex items-center space-x-6">
-                <nav class="hidden md:flex space-x-6 font-semibold text-slate-600 text-sm">
-                    <a href="#leistungen" class="hover:text-brand-600 transition">Schwerpunkte</a>
-                    <a href="#ueber-uns" class="hover:text-brand-600 transition">Über uns</a>
-                    <a href="#kontakt" class="hover:text-brand-600 transition">Kontakt &amp; Anfahrt</a>
-                </nav>
+            <!-- Mitte: Navigation (Perfekt zentriert) -->
+            <nav class="hidden md:flex items-center justify-center space-x-8 font-semibold text-slate-600 text-sm">
+                <a href="#leistungen" class="hover:text-brand-600 transition">Schwerpunkte</a>
+                <a href="#ueber-uns" class="hover:text-brand-600 transition">Über uns</a>
+                <a href="#kontakt" class="hover:text-brand-600 transition">Kontakt &amp; Anfahrt</a>
+            </nav>
 
+            <!-- Rechts: Anruf-Button -->
+            <div class="flex items-center justify-end">
                 <a href="tel:059318476765" class="bg-brand-600 hover:bg-brand-700 text-white font-bold px-4 py-2 rounded-xl transition shadow-sm flex items-center space-x-2 text-sm">
                     <span>📞</span>
                     <span>05931 / 84 76 76 5</span>
@@ -189,7 +190,7 @@
                 </div>
             </div>
 
-            <!-- Galerie (Gestochen scharf mit GPU-beschleunigtem Hover) -->
+            <!-- Galerie -->
             <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                 
                 <!-- Bild 1: Empfang -->
