@@ -40,7 +40,7 @@
     <header class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
         <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
             
-            <!-- Links: Logo (Garantierte Ausrichtung links) -->
+            <!-- Links: Logo -->
             <a href="#" class="flex items-center shrink-0">
                 <img 
                     src="Kuhl.png" 
@@ -189,36 +189,36 @@
                 </div>
             </div>
 
-            <!-- Galerie (2 Karten mit scharfem Bild & Zoom-Effekt) -->
+            <!-- Galerie (Genau 2 Bilder mit Hover-Bewegung & Zoom-Effekt) -->
             <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                 
-                <!-- Bild 1: Eingang -->
-                <div class="group bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition">
+                <!-- Bild 1: Empfang -->
+                <div class="group bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 ease-out cursor-pointer">
                     <div class="h-64 sm:h-72 bg-slate-100 overflow-hidden">
                         <img 
                             src="Eingang.jpg" 
                             alt="Empfangsbereich REAKTIV KUHL" 
-                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500 ease-out"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
                             onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'h-full flex items-center justify-center text-xs text-slate-400 p-4 text-center\'>📸 Eingang.jpg fehlt</div>';"
                         >
                     </div>
-                    <div class="p-4 text-center border-t border-slate-100">
-                        <p class="font-bold text-dark-900 text-sm">Empfang</p>
+                    <div class="p-4 text-center border-t border-slate-100 bg-white">
+                        <p class="font-bold text-dark-900 text-sm group-hover:text-brand-600 transition-colors">Empfang</p>
                     </div>
                 </div>
 
                 <!-- Bild 2: Wartebereich -->
-                <div class="group bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition">
+                <div class="group bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 ease-out cursor-pointer">
                     <div class="h-64 sm:h-72 bg-slate-100 overflow-hidden">
                         <img 
                             src="Wartebereich.jpg" 
                             alt="Wartebereich REAKTIV KUHL" 
-                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500 ease-out"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
                             onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'h-full flex items-center justify-center text-xs text-slate-400 p-4 text-center\'>📸 Wartebereich.jpg fehlt</div>';"
                         >
                     </div>
-                    <div class="p-4 text-center border-t border-slate-100">
-                        <p class="font-bold text-dark-900 text-sm">Wartebereich</p>
+                    <div class="p-4 text-center border-t border-slate-100 bg-white">
+                        <p class="font-bold text-dark-900 text-sm group-hover:text-brand-600 transition-colors">Wartebereich</p>
                     </div>
                 </div>
 
