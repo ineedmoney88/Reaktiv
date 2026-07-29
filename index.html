@@ -163,40 +163,81 @@
         </div>
     </section>
 
-    <!-- Über uns -->
+   <!-- Über uns & Praxisgalerie -->
     <section id="ueber-uns" class="bg-white py-16 border-y border-slate-200">
-        <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+        <div class="max-w-6xl mx-auto px-4">
             
-            <div class="bg-slate-100 p-2 rounded-2xl border border-slate-200 shadow-sm">
-                <img 
-                    src="team.jpg" 
-                    alt="Ulrich Kuhl und Ruth Kuhl - REAKTIV KUHL Meppen" 
-                    class="w-full h-72 object-cover rounded-xl"
-                    onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'h-72 bg-slate-100 rounded-xl flex flex-col items-center justify-center text-slate-400 p-6 text-center\'><span class=\'text-3xl mb-2\'>📸</span><span class=\'text-xs font-medium text-slate-500\'>Foto als team.jpg im selben Ordner speichern</span></div>';"
-                >
-            </div>
-
-            <div>
+            <!-- Text-Intro -->
+            <div class="max-w-3xl mx-auto text-center mb-12">
                 <span class="text-brand-600 font-bold text-xs tracking-widest uppercase">Persönlich &amp; Erfahren</span>
-                <h2 class="text-2xl font-bold text-dark-900 mt-1 mb-4">Willkommen bei REAKTIV KUHL</h2>
-                <p class="text-slate-600 mb-6 leading-relaxed text-sm">
+                <h2 class="text-2xl md:text-3xl font-bold text-dark-900 mt-1 mb-4">Willkommen bei REAKTIV KUHL</h2>
+                <p class="text-slate-600 leading-relaxed text-sm md:text-base">
                     In unserer Praxis am Sophienplatz verbinden wir – <strong class="text-dark-900 font-semibold">Ulrich &amp; Ruth Kuhl</strong> – jahrelange therapeutische Erfahrung mit modernsten Ansätzen aus Physiotherapie und Osteopathie. Unser Ziel ist es, nicht nur Symptome zu behandeln, sondern die Ursachen ganzheitlich anzugehen.
                 </p>
-                <ul class="space-y-2.5 text-sm text-slate-700 font-medium">
-                    <li class="flex items-center space-x-3">
+                
+                <div class="flex flex-wrap justify-center gap-6 mt-6 text-sm text-slate-700 font-medium">
+                    <span class="flex items-center space-x-2">
                         <span class="w-5 h-5 rounded-full bg-brand-50 text-brand-600 flex items-center justify-center text-xs font-bold">✓</span>
-                        <span>Spezialisiert auf Säuglinge, Kinder &amp; Erwachsene</span>
-                    </li>
-                    <li class="flex items-center space-x-3">
+                        <span>Säuglinge, Kinder &amp; Erwachsene</span>
+                    </span>
+                    <span class="flex items-center space-x-2">
                         <span class="w-5 h-5 rounded-full bg-brand-50 text-brand-600 flex items-center justify-center text-xs font-bold">✓</span>
-                        <span>Verbindung von Physiotherapie &amp; Osteopathie</span>
-                    </li>
-                    <li class="flex items-center space-x-3">
+                        <span>Physiotherapie &amp; Osteopathie</span>
+                    </span>
+                    <span class="flex items-center space-x-2">
                         <span class="w-5 h-5 rounded-full bg-brand-50 text-brand-600 flex items-center justify-center text-xs font-bold">✓</span>
-                        <span>Zentrale Praxis am Sophienplatz 25 in Meppen</span>
-                    </li>
-                </ul>
+                        <span>Zentral am Sophienplatz 25</span>
+                    </span>
+                </div>
             </div>
+
+            <!-- Praxis-Galerie (3 Bilder) -->
+            <div class="grid md:grid-cols-3 gap-6">
+                
+                <!-- Bild 1: Empfang / Eingang -->
+                <div class="group relative rounded-2xl overflow-hidden border border-slate-200 bg-slate-100 shadow-sm hover:shadow-md transition">
+                    <img 
+                        src="Eingang.jpg" 
+                        alt="Empfangsbereich REAKTIV KUHL Meppen" 
+                        class="w-full h-64 object-cover group-hover:scale-105 transition duration-300"
+                        onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'h-64 bg-slate-100 flex items-center justify-center text-xs text-slate-400 p-4 text-center\'>📸 Eingang.jpg fehlt im Ordner</div>';"
+                    >
+                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent p-4 text-white">
+                        <p class="font-bold text-sm">Empfang &amp; Anmeldung</p>
+                        <p class="text-xs text-slate-200">Hell und einladend</p>
+                    </div>
+                </div>
+
+                <!-- Bild 2: Wartebereich -->
+                <div class="group relative rounded-2xl overflow-hidden border border-slate-200 bg-slate-100 shadow-sm hover:shadow-md transition">
+                    <img 
+                        src="Wartebereich.jpg" 
+                        alt="Wartebereich REAKTIV KUHL Meppen" 
+                        class="w-full h-64 object-cover group-hover:scale-105 transition duration-300"
+                        onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'h-64 bg-slate-100 flex items-center justify-center text-xs text-slate-400 p-4 text-center\'>📸 Wartebereich.jpg fehlt im Ordner</div>';"
+                    >
+                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent p-4 text-white">
+                        <p class="font-bold text-sm">Wartebereich</p>
+                        <p class="text-xs text-slate-200">Entpannte Atmosphäre</p>
+                    </div>
+                </div>
+
+                <!-- Bild 3: Deko / Detail -->
+                <div class="group relative rounded-2xl overflow-hidden border border-slate-200 bg-slate-100 shadow-sm hover:shadow-md transition">
+                    <img 
+                        src="Deko.jpg" 
+                        alt="REAKTIV KUHL Holzaufsteller Praxisdeko" 
+                        class="w-full h-64 object-cover group-hover:scale-105 transition duration-300"
+                        onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'h-64 bg-slate-100 flex items-center justify-center text-xs text-slate-400 p-4 text-center\'>📸 Deko.jpg fehlt im Ordner</div>';"
+                    >
+                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent p-4 text-white">
+                        <p class="font-bold text-sm">Liebe zum Detail</p>
+                        <p class="text-xs text-slate-200">REAKTIV KUHL Meppen</p>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
     </section>
 
