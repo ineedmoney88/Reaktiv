@@ -36,12 +36,12 @@
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased font-sans">
 
-    <!-- Header / Nav (Zentrierte Menüführung) -->
+    <!-- Header / Nav (Absolut zentrierte Menüführung) -->
     <header class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
-        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between md:grid md:grid-cols-3">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between relative">
             
             <!-- Links: Logo -->
-            <a href="#" class="flex items-center justify-start shrink-0">
+            <a href="#" class="flex items-center shrink-0 z-10">
                 <img 
                     src="Kuhl.png" 
                     alt="REAKTIV KUHL - Praxis für Physiotherapie und Osteopathie" 
@@ -50,15 +50,15 @@
                 >
             </a>
 
-            <!-- Mitte: Navigation (Perfekt zentriert) -->
-            <nav class="hidden md:flex items-center justify-center space-x-8 font-semibold text-slate-600 text-sm">
+            <!-- Mitte: Navigation (Absolut zur Bildschirm-/Header-Mitte) -->
+            <nav class="hidden md:flex items-center space-x-8 font-semibold text-slate-600 text-sm absolute left-1/2 -translate-x-1/2">
                 <a href="#leistungen" class="hover:text-brand-600 transition">Schwerpunkte</a>
                 <a href="#ueber-uns" class="hover:text-brand-600 transition">Über uns</a>
                 <a href="#kontakt" class="hover:text-brand-600 transition">Kontakt &amp; Anfahrt</a>
             </nav>
 
             <!-- Rechts: Anruf-Button -->
-            <div class="flex items-center justify-end">
+            <div class="flex items-center shrink-0 z-10">
                 <a href="tel:059318476765" class="bg-brand-600 hover:bg-brand-700 text-white font-bold px-4 py-2 rounded-xl transition shadow-sm flex items-center space-x-2 text-sm">
                     <span>📞</span>
                     <span>05931 / 84 76 76 5</span>
