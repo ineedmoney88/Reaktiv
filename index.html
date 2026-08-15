@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>REAKTIV KUHL | Praxis für Physiotherapie und Osteopathie Meppen</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- SEO Meta Tags -->
+    <title>Praxis für Physiotherapie & Osteopathie Meppen | REAKTIV KUHL</title>
+    <meta name="description" content="Ihre Praxis für Physiotherapie & Osteopathie in Meppen. Spezialisiert auf Krankengymnastik, Säuglings- & Kinder-Bobath, Manuelle Therapie, Skoliose (Schroth) & CMD. Jetzt Termin vereinbaren!">
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -15,7 +15,7 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        sans: ['system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'sans-serif'],
                     },
                     colors: {
                         brand: {
@@ -33,64 +33,127 @@
             }
         }
     </script>
-</head>
-<body class="bg-slate-50 text-slate-800 antialiased font-sans">
 
-    <!-- Header / Nav (Absolut zentrierte Menüführung) -->
-    <header class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
-        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between relative">
+    <!-- Schema.org Structured Data für Google Local SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Physiotherapy",
+      "name": "REAKTIV KUHL - Praxis für Physiotherapie und Osteopathie",
+      "image": "https://reaktiv-kuhl.de/logo.png",
+      "telephone": "059318476765",
+      "email": "info@reaktiv-kuhl.de",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Sophienplatz 25",
+        "addressLocality": "Meppen",
+        "postalCode": "49716",
+        "addressCountry": "DE"
+      },
+      "url": "https://reaktiv-kuhl.de",
+      "priceRange": "$$"
+    }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans flex flex-col min-h-screen relative overflow-x-hidden">
+
+    <!-- Header / Navigation -->
+    <header class="bg-white/90 backdrop-blur-md border-b border-slate-200 sticky top-0 z-40 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
             
-            <!-- Links: Logo -->
-            <a href="#" class="flex items-center shrink-0 z-10">
+            <!-- LINKS: Schriftzug / Logo -->
+            <a href="index.html" class="flex items-center shrink-0">
                 <img 
-                    src="Kuhl.png" 
-                    alt="REAKTIV KUHL - Praxis für Physiotherapie und Osteopathie" 
-                    class="h-12 md:h-14 w-auto object-contain transition-all duration-200"
-                    onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'text-left\'><div class=\'text-xl font-bold tracking-wider text-slate-900\'><span class=\'text-brand-600\'>REAKTIV</span> KUHL</div><div class=\'text-[10px] font-semibold text-slate-500 uppercase tracking-widest\'>Physiotherapie &amp; Osteopathie</div></div>';"
+                    src="Reaktiv.png" 
+                    alt="REAKTIV KUHL Schriftzug" 
+                    class="h-8 md:h-10 w-auto object-contain block"
+                    onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');"
                 >
+                <!-- Fallback-Text -->
+                <div class="hidden text-left">
+                    <div class="text-lg md:text-xl font-extrabold tracking-tight text-slate-900 leading-none">
+                        <span class="text-brand-600">REAKTIV</span> KUHL
+                    </div>
+                    <div class="text-[9px] md:text-[10px] font-bold text-slate-500 uppercase tracking-widest mt-0.5">
+                        Physiotherapie &amp; Osteopathie
+                    </div>
+                </div>
             </a>
 
-            <!-- Mitte: Navigation (Absolut zur Bildschirm-/Header-Mitte) -->
-            <nav class="hidden md:flex items-center space-x-8 font-semibold text-slate-600 text-sm absolute left-1/2 -translate-x-1/2">
+            <!-- MITTE: Navigations-Links (Desktop) -->
+            <nav class="hidden md:flex items-center space-x-8 font-semibold text-slate-600 text-sm">
                 <a href="#leistungen" class="hover:text-brand-600 transition">Schwerpunkte</a>
                 <a href="#ueber-uns" class="hover:text-brand-600 transition">Über uns</a>
                 <a href="#kontakt" class="hover:text-brand-600 transition">Kontakt &amp; Anfahrt</a>
             </nav>
 
-            <!-- Rechts: Anruf-Button -->
-            <div class="flex items-center shrink-0 z-10">
-                <a href="tel:059318476765" class="bg-brand-600 hover:bg-brand-700 text-white font-bold px-4 py-2 rounded-xl transition shadow-sm flex items-center space-x-2 text-sm">
+            <!-- RECHTS: Anruf Button & Mobile Toggle -->
+            <div class="flex items-center space-x-3">
+                <a href="tel:059318476765" class="bg-brand-600 hover:bg-brand-700 text-white font-bold px-4 py-2 rounded-xl transition shadow-sm flex items-center space-x-2 text-xs md:text-sm">
                     <span>📞</span>
-                    <span>05931 / 84 76 76 5</span>
+                    <span class="hidden sm:inline">05931 / 84 76 76 5</span>
+                    <span class="sm:hidden">Anrufen</span>
                 </a>
+
+                <!-- Hamburger Button für Mobile -->
+                <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="md:hidden p-2 text-slate-600 hover:text-dark-900 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
             </div>
 
+        </div>
+
+        <!-- Mobile Menu Nav -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-4 space-y-2 font-medium text-sm text-slate-700">
+            <a href="#leistungen" onclick="toggleMobileMenu()" class="block py-2 hover:text-brand-600">Schwerpunkte</a>
+            <a href="#ueber-uns" onclick="toggleMobileMenu()" class="block py-2 hover:text-brand-600">Über uns</a>
+            <a href="#kontakt" onclick="toggleMobileMenu()" class="block py-2 hover:text-brand-600">Kontakt &amp; Anfahrt</a>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="bg-gradient-to-b from-slate-100 via-brand-50/20 to-slate-50 py-16 md:py-20 px-4">
-        <div class="max-w-4xl mx-auto text-center">
-            <span class="bg-white border border-slate-200 text-dark-800 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest shadow-sm">
-                📍 Sophienplatz 25 • 49716 Meppen
-            </span>
+    <section class="bg-gradient-to-b from-slate-100 via-brand-50/10 to-slate-50 py-12 md:py-20 px-4">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 md:gap-12">
             
-            <h1 class="text-3xl md:text-5xl font-extrabold text-dark-900 mt-6 mb-6 leading-tight">
-                Ganzheitliche Gesundheit &amp; Bewegung in Meppen
-            </h1>
-            
-            <p class="text-base md:text-lg text-slate-600 mb-8 max-w-2xl mx-auto font-normal">
-                Willkommen bei <strong class="text-dark-900 font-semibold">REAKTIV KUHL</strong>. Wir begleiten Säuglinge, Kinder und Erwachsene mit spezialisierter Physiotherapie, Osteopathie und individuellen Behandlungsansätzen.
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#kontakt" class="bg-brand-600 hover:bg-brand-700 text-white font-semibold px-8 py-3.5 rounded-xl shadow-md hover:shadow-lg transition text-base">
-                    Termin vereinbaren
-                </a>
-                <a href="tel:01601884068" class="bg-white hover:bg-slate-100 text-dark-800 font-semibold px-8 py-3.5 rounded-xl border border-slate-300 transition text-base flex items-center justify-center space-x-2 shadow-sm">
-                    <span>📱</span>
-                    <span>Mobil: 0160 1884068</span>
-                </a>
+            <!-- LINKS: Logo-Box -->
+            <div class="w-full md:w-auto flex justify-center shrink-0">
+                <div class="bg-white p-6 md:p-8 rounded-3xl shadow-xl border border-slate-100 max-w-[280px] sm:max-w-[340px] md:max-w-[360px]">
+                    <img 
+                        src="logo.png" 
+                        alt="REAKTIV KUHL Logo" 
+                        class="w-full h-auto object-contain block"
+                        onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'p-8 text-center text-xs text-slate-400\'>📸 logo.png</div>';"
+                    >
+                </div>
             </div>
+
+            <!-- RECHTS: Text & Buttons -->
+            <div class="flex-1 text-center md:text-left">
+                <span class="inline-block bg-white border border-slate-200 text-dark-800 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest shadow-sm">
+                    📍 Sophienplatz 25 • 49716 Meppen
+                </span>
+                
+                <h1 class="text-3xl lg:text-5xl font-extrabold text-dark-900 mt-6 mb-6 leading-tight">
+                    Praxis für Physiotherapie &amp; Osteopathie in Meppen
+                </h1>
+                
+                <p class="text-base lg:text-lg text-slate-600 mb-8 font-normal max-w-xl">
+                    Willkommen bei <strong class="text-dark-900 font-semibold">REAKTIV KUHL</strong>. Wir begleiten Säuglinge, Kinder und Erwachsene mit spezialisierter Physiotherapie, Osteopathie und individuellen Behandlungsansätzen.
+                </p>
+
+                <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
+                    <a href="#kontakt" class="bg-brand-600 hover:bg-brand-700 text-white font-semibold px-8 py-3.5 rounded-xl shadow-md hover:shadow-lg transition text-base text-center">
+                        Termin vereinbaren
+                    </a>
+                    <a href="tel:01601884068" class="bg-white hover:bg-slate-100 text-dark-800 font-semibold px-8 py-3.5 rounded-xl border border-slate-300 transition text-base flex items-center justify-center space-x-2 shadow-sm">
+                        <span>📱</span>
+                        <span>Mobil: 0160 1884068</span>
+                    </a>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -105,65 +168,95 @@
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             
-            <!-- Osteopathie -->
-            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition border-t-4 border-t-brand-600">
-                <div class="w-10 h-10 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center mb-4 text-xl font-bold">🌿</div>
-                <h3 class="text-lg font-bold text-dark-900 mb-2">Osteopathie</h3>
-                <p class="text-slate-600 text-sm leading-relaxed">Ganzheitliche Befundung und Behandlung, um Einschränkungen und Blockaden im Körper aufzuspüren und Selbstheilungskräfte zu aktivieren.</p>
-            </div>
+            <!-- OSTEOPATHIE -->
+            <a href="osteopathie.html" onclick="event.preventDefault(); openDrawer('osteopathie.html');" class="group bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition border-t-4 border-t-brand-600 flex flex-col justify-between">
+                <div>
+                    <div class="w-10 h-10 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center mb-4 text-xl font-bold">🌿</div>
+                    <h3 class="text-lg font-bold text-dark-900 mb-2 group-hover:text-brand-600 transition">Osteopathie</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Ganzheitliche Befundung und Behandlung, um Einschränkungen und Blockaden im Körper aufzuspüren und Selbstheilungskräfte zu aktivieren.</p>
+                </div>
+                <span class="inline-flex items-center text-xs font-bold text-brand-600 mt-4 group-hover:underline">Mehr erfahren &rarr;</span>
+            </a>
 
-            <!-- Manuelle Therapie -->
-            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition border-t-4 border-t-dark-800">
-                <div class="w-10 h-10 bg-slate-100 text-dark-800 rounded-xl flex items-center justify-center mb-4 text-xl font-bold">🛠️</div>
-                <h3 class="text-lg font-bold text-dark-900 mb-2">Manuelle Therapie</h3>
-                <p class="text-slate-600 text-sm leading-relaxed">Gezielte Handgriffe und Mobilisationstechniken zur Linderung von Gelenk- und Rückenbeschwerden sowie Bewegungsstörungen.</p>
-            </div>
+            <!-- MANUELLE THERAPIE -->
+            <a href="manuelle-therapie.html" onclick="event.preventDefault(); openDrawer('manuelle-therapie.html');" class="group bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition border-t-4 border-t-dark-800 flex flex-col justify-between">
+                <div>
+                    <div class="w-10 h-10 bg-slate-100 text-dark-800 rounded-xl flex items-center justify-center mb-4 text-xl font-bold">🛠️</div>
+                    <h3 class="text-lg font-bold text-dark-900 mb-2 group-hover:text-brand-600 transition">Manuelle Therapie</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Gezielte Handgriffe und Mobilisationstechniken zur Linderung von Gelenk- und Rückenbeschwerden sowie Bewegungsstörungen.</p>
+                </div>
+                <span class="inline-flex items-center text-xs font-bold text-brand-600 mt-4 group-hover:underline">Mehr erfahren &rarr;</span>
+            </a>
 
-            <!-- KG - ZNS / Bobath -->
-            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition border-t-4 border-t-brand-600">
-                <div class="w-10 h-10 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center mb-4 text-xl font-bold">👶</div>
-                <h3 class="text-lg font-bold text-dark-900 mb-2">KG – ZNS / Bobath</h3>
-                <p class="text-slate-600 text-sm leading-relaxed">Neurologische Krankengymnastik nach dem Bobath-Konzept – spezialisiert <strong class="text-dark-900 font-semibold">für Säuglinge, Kinder und Erwachsene</strong>.</p>
-            </div>
+            <!-- BOBATH -->
+            <a href="bobath.html" onclick="event.preventDefault(); openDrawer('bobath.html');" class="group bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition border-t-4 border-t-brand-600 flex flex-col justify-between">
+                <div>
+                    <div class="w-10 h-10 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center mb-4 text-xl font-bold">👶</div>
+                    <h3 class="text-lg font-bold text-dark-900 mb-2 group-hover:text-brand-600 transition">KG – ZNS / Bobath</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Neurologische Krankengymnastik nach dem Bobath-Konzept – spezialisiert <strong class="text-dark-900 font-semibold">für Säuglinge, Kinder und Erwachsene</strong>.</p>
+                </div>
+                <span class="inline-flex items-center text-xs font-bold text-brand-600 mt-4 group-hover:underline">Mehr erfahren &rarr;</span>
+            </a>
 
-            <!-- Skoliose Therapy -->
-            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition border-t-4 border-t-dark-800">
-                <div class="w-10 h-10 bg-slate-100 text-dark-800 rounded-xl flex items-center justify-center mb-4 text-xl font-bold">🦴</div>
-                <h3 class="text-lg font-bold text-dark-900 mb-2">Skoliose Therapie (Schroth)</h3>
-                <p class="text-slate-600 text-sm leading-relaxed">Dreidimensionale Skoliosebehandlung nach Katharina Schroth zur gezielten Korrektur und Aufrichtung der Wirbelsäule.</p>
-            </div>
+            <!-- SKOLIOSE -->
+            <a href="skoliose.html" onclick="event.preventDefault(); openDrawer('skoliose.html');" class="group bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition border-t-4 border-t-dark-800 flex flex-col justify-between">
+                <div>
+                    <div class="w-10 h-10 bg-slate-100 text-dark-800 rounded-xl flex items-center justify-center mb-4 text-xl font-bold">🦴</div>
+                    <h3 class="text-lg font-bold text-dark-900 mb-2 group-hover:text-brand-600 transition">Skoliose Therapie (Schroth)</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Dreidimensionale Skoliosebehandlung nach Katharina Schroth zur gezielten Korrektur und Aufrichtung der Wirbelsäule.</p>
+                </div>
+                <span class="inline-flex items-center text-xs font-bold text-brand-600 mt-4 group-hover:underline">Mehr erfahren &rarr;</span>
+            </a>
 
-            <!-- CMD / Kiefergelenk -->
-            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition border-t-4 border-t-brand-600">
-                <div class="w-10 h-10 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center mb-4 text-xl font-bold">🦷</div>
-                <h3 class="text-lg font-bold text-dark-900 mb-2">Kiefergelenktherapie (CMD)</h3>
-                <p class="text-slate-600 text-sm leading-relaxed">Therapie bei Funktionsstörungen des Kiefergelenks, Zähneknirschen, Kopfschmerzen und Nackenverspannungen.</p>
-            </div>
+            <!-- CMD -->
+            <a href="cmd.html" onclick="event.preventDefault(); openDrawer('cmd.html');" class="group bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition border-t-4 border-t-brand-600 flex flex-col justify-between">
+                <div>
+                    <div class="w-10 h-10 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center mb-4 text-xl font-bold">🦷</div>
+                    <h3 class="text-lg font-bold text-dark-900 mb-2 group-hover:text-brand-600 transition">Kiefergelenktherapie (CMD)</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Therapie bei Funktionsstörungen des Kiefergelenks, Zähneknirschen, Kopfschmerzen und Nackenverspannungen.</p>
+                </div>
+                <span class="inline-flex items-center text-xs font-bold text-brand-600 mt-4 group-hover:underline">Mehr erfahren &rarr;</span>
+            </a>
 
-            <!-- Sportphysiotherapie -->
-            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition border-t-4 border-t-dark-800">
-                <div class="w-10 h-10 bg-slate-100 text-dark-800 rounded-xl flex items-center justify-center mb-4 text-xl font-bold">🏃</div>
-                <h3 class="text-lg font-bold text-dark-900 mb-2">Sportphysiotherapie</h3>
-                <p class="text-slate-600 text-sm leading-relaxed">Gezielte Prävention, Rehabilitation und Betreuung von Sportlern für eine sichere und schnelle Rückkehr zur Leistungsfähigkeit.</p>
-            </div>
+            <!-- SPORTPHYSIOTHERAPIE -->
+            <a href="sportphysiotherapie.html" onclick="event.preventDefault(); openDrawer('sportphysiotherapie.html');" class="group bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition border-t-4 border-t-dark-800 flex flex-col justify-between">
+                <div>
+                    <div class="w-10 h-10 bg-slate-100 text-dark-800 rounded-xl flex items-center justify-center mb-4 text-xl font-bold">🏃</div>
+                    <h3 class="text-lg font-bold text-dark-900 mb-2 group-hover:text-brand-600 transition">Sportphysiotherapie</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Gezielte Prävention, Rehabilitation und Betreuung von Sportlern für eine sichere und schnelle Rückkehr zur Leistungsfähigkeit.</p>
+                </div>
+                <span class="inline-flex items-center text-xs font-bold text-brand-600 mt-4 group-hover:underline">Mehr erfahren &rarr;</span>
+            </a>
 
         </div>
 
-        <!-- Weitere Leistungen -->
+        <!-- WEITERE SPEZIALISIERUNGEN (VERLINKUNG ZU DEN EINZELNEN HTML-DATEIEN VIA DRAWER) -->
         <div class="mt-10 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
             <h4 class="font-bold text-dark-900 mb-4 text-center text-sm">Weitere Spezialisierungen in unserer Praxis:</h4>
             <div class="flex flex-wrap justify-center gap-2">
-                <span class="bg-slate-100 text-slate-700 text-xs font-medium px-3 py-1.5 rounded-lg border border-slate-200">MLD – Lymphdrainage</span>
-                <span class="bg-slate-100 text-slate-700 text-xs font-medium px-3 py-1.5 rounded-lg border border-slate-200">Massagen</span>
-                <span class="bg-slate-100 text-slate-700 text-xs font-medium px-3 py-1.5 rounded-lg border border-slate-200">Dorn – Hock – Therapie</span>
-                <span class="bg-slate-100 text-slate-700 text-xs font-medium px-3 py-1.5 rounded-lg border border-slate-200">WS – Behandlung</span>
-                <span class="bg-slate-100 text-slate-700 text-xs font-medium px-3 py-1.5 rounded-lg border border-slate-200">Kinesio – Tape</span>
-                <span class="bg-brand-50 text-brand-700 border border-brand-100 text-xs font-semibold px-3 py-1.5 rounded-lg">🏡 Hausbesuche auf Anfrage</span>
+                <a href="mld-lymphdrainage.html" onclick="event.preventDefault(); openDrawer('mld-lymphdrainage.html');" class="bg-slate-100 hover:bg-brand-50 hover:text-brand-600 hover:border-brand-200 text-slate-700 text-xs font-medium px-3.5 py-2 rounded-lg border border-slate-200 transition flex items-center space-x-1">
+                    <span>💧 MLD – Lymphdrainage</span>
+                </a>
+                <a href="massagen.html" onclick="event.preventDefault(); openDrawer('massagen.html');" class="bg-slate-100 hover:bg-brand-50 hover:text-brand-600 hover:border-brand-200 text-slate-700 text-xs font-medium px-3.5 py-2 rounded-lg border border-slate-200 transition flex items-center space-x-1">
+                    <span>💆 Massagen</span>
+                </a>
+                <a href="dorn-hock-therapie.html" onclick="event.preventDefault(); openDrawer('dorn-hock-therapie.html');" class="bg-slate-100 hover:bg-brand-50 hover:text-brand-600 hover:border-brand-200 text-slate-700 text-xs font-medium px-3.5 py-2 rounded-lg border border-slate-200 transition flex items-center space-x-1">
+                    <span>⚖️ Dorn – Hock – Therapie</span>
+                </a>
+                <a href="ws-behandlung.html" onclick="event.preventDefault(); openDrawer('ws-behandlung.html');" class="bg-slate-100 hover:bg-brand-50 hover:text-brand-600 hover:border-brand-200 text-slate-700 text-xs font-medium px-3.5 py-2 rounded-lg border border-slate-200 transition flex items-center space-x-1">
+                    <span>🧘 WS – Behandlung</span>
+                </a>
+                <a href="kinesio-tape.html" onclick="event.preventDefault(); openDrawer('kinesio-tape.html');" class="bg-slate-100 hover:bg-brand-50 hover:text-brand-600 hover:border-brand-200 text-slate-700 text-xs font-medium px-3.5 py-2 rounded-lg border border-slate-200 transition flex items-center space-x-1">
+                    <span>🩹 Kinesio – Tape</span>
+                </a>
+                <a href="hausbesuche.html" onclick="event.preventDefault(); openDrawer('hausbesuche.html');" class="bg-brand-50 hover:bg-brand-100 text-brand-700 border border-brand-200 text-xs font-semibold px-3.5 py-2 rounded-lg transition flex items-center space-x-1">
+                    <span>🏡 Hausbesuche auf Anfrage</span>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Über uns & Galerie -->
+    <!-- Über uns -->
     <section id="ueber-uns" class="bg-white py-16 border-y border-slate-200">
         <div class="max-w-6xl mx-auto px-4">
             
@@ -171,67 +264,47 @@
                 <span class="text-brand-600 font-bold text-xs tracking-widest uppercase">Persönlich &amp; Erfahren</span>
                 <h2 class="text-2xl md:text-3xl font-bold text-dark-900 mt-1 mb-4">Willkommen bei REAKTIV KUHL</h2>
                 <p class="text-slate-600 leading-relaxed text-sm md:text-base">
-                    In unserer Praxis am Sophienplatz verbinden wir – <strong class="text-dark-900 font-semibold">Ulrich &amp; Ruth Kuhl</strong> – jahrelange therapeutische Erfahrung mit modernsten Ansätzen aus Physiotherapie und Osteopathie. Unser Ziel ist es, nicht nur Symptome zu behandeln, sondern die Ursachen ganzheitlich anzugehen.
+                    In unserer Praxis am Sophienplatz verbinden wir – <strong class="text-dark-900 font-semibold">Ulrich &amp; Ruth Kuhl</strong> – jahrelange therapeutische Erfahrung mit modernsten Ansätzen aus Physiotherapie und Osteopathie.
                 </p>
-                
-                <div class="flex flex-wrap justify-center gap-6 mt-6 text-sm text-slate-700 font-medium">
-                    <span class="flex items-center space-x-2">
-                        <span class="w-5 h-5 rounded-full bg-brand-50 text-brand-600 flex items-center justify-center text-xs font-bold">✓</span>
-                        <span>Säuglinge, Kinder &amp; Erwachsene</span>
-                    </span>
-                    <span class="flex items-center space-x-2">
-                        <span class="w-5 h-5 rounded-full bg-brand-50 text-brand-600 flex items-center justify-center text-xs font-bold">✓</span>
-                        <span>Physiotherapie &amp; Osteopathie</span>
-                    </span>
-                    <span class="flex items-center space-x-2">
-                        <span class="w-5 h-5 rounded-full bg-brand-50 text-brand-600 flex items-center justify-center text-xs font-bold">✓</span>
-                        <span>Zentral am Sophienplatz 25</span>
-                    </span>
-                </div>
             </div>
 
             <!-- Galerie -->
             <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                
-                <!-- Bild 1: Empfang -->
-                <div class="group bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ease-out transform-gpu">
+                <div class="group bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                     <div class="h-64 sm:h-72 bg-slate-100 overflow-hidden relative">
                         <img 
                             src="Eingang.jpg" 
                             alt="Empfangsbereich REAKTIV KUHL" 
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out transform-gpu [backface-visibility:hidden]"
-                            onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'h-full flex items-center justify-center text-xs text-slate-400 p-4 text-center\'>📸 Eingang.jpg fehlt</div>';"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'h-full flex items-center justify-center text-xs text-slate-400 p-4 text-center\'>📸 Eingang.jpg</div>';"
                         >
                     </div>
                     <div class="p-4 text-center border-t border-slate-100 bg-white">
-                        <p class="font-bold text-dark-900 text-sm group-hover:text-brand-600 transition-colors">Empfang</p>
+                        <p class="font-bold text-dark-900 text-sm">Empfang</p>
                     </div>
                 </div>
 
-                <!-- Bild 2: Wartebereich -->
-                <div class="group bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ease-out transform-gpu">
+                <div class="group bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                     <div class="h-64 sm:h-72 bg-slate-100 overflow-hidden relative">
                         <img 
                             src="Wartebereich.jpg" 
                             alt="Wartebereich REAKTIV KUHL" 
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out transform-gpu [backface-visibility:hidden]"
-                            onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'h-full flex items-center justify-center text-xs text-slate-400 p-4 text-center\'>📸 Wartebereich.jpg fehlt</div>';"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'h-full flex items-center justify-center text-xs text-slate-400 p-4 text-center\'>📸 Wartebereich.jpg</div>';"
                         >
                     </div>
                     <div class="p-4 text-center border-t border-slate-100 bg-white">
-                        <p class="font-bold text-dark-900 text-sm group-hover:text-brand-600 transition-colors">Wartebereich</p>
+                        <p class="font-bold text-dark-900 text-sm">Wartebereich</p>
                     </div>
                 </div>
-
             </div>
 
         </div>
     </section>
 
-    <!-- Kontakt & Zeiten -->
+    <!-- Kontakt -->
     <section id="kontakt" class="max-w-6xl mx-auto px-4 py-16">
         <div class="grid md:grid-cols-2 gap-10">
-            <!-- Info Card -->
             <div class="bg-dark-900 text-white p-8 rounded-2xl flex flex-col justify-between shadow-lg">
                 <div>
                     <span class="text-brand-600 font-bold text-xs tracking-widest uppercase">Kontakt</span>
@@ -245,59 +318,284 @@
                         </p>
                         <p class="flex items-center space-x-3">
                             <span>📞</span>
-                            <span><strong>Telefon:</strong> 05931 / 84 76 76 5</span>
+                            <span><strong>Telefon:</strong> <a href="tel:059318476765" class="hover:text-white underline decoration-slate-600">05931 / 84 76 76 5</a></span>
                         </p>
                         <p class="flex items-center space-x-3">
                             <span>📱</span>
-                            <span><strong>Mobil:</strong> 0160 1884068</span>
+                            <span><strong>Mobil:</strong> <a href="tel:01601884068" class="hover:text-white underline decoration-slate-600">0160 1884068</a></span>
                         </p>
                         <p class="flex items-center space-x-3">
                             <span>✉️</span>
-                            <span><strong>E-Mail:</strong> info@reaktiv-kuhl.de</span>
+                            <span><strong>E-Mail:</strong> <a href="mailto:info@reaktiv-kuhl.de" class="hover:text-white underline decoration-slate-600">info@reaktiv-kuhl.de</a></span>
                         </p>
+                    </div>
+
+                    <div class="mt-6 pt-6 border-t border-slate-800">
+                        <a href="https://maps.google.com/?q=Sophienplatz+25,+49716+Meppen" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 text-xs bg-slate-800 hover:bg-slate-700 text-slate-200 px-3.5 py-2 rounded-lg transition border border-slate-700">
+                            <span>🗺️</span>
+                            <span>Route auf Google Maps öffnen</span>
+                        </a>
                     </div>
 
                     <hr class="border-slate-800 my-6">
                     <h3 class="font-bold text-white text-sm mb-1">Termine nach Vereinbarung</h3>
-                    <p class="text-xs text-slate-400">Rufen Sie uns gerne an oder nutzen Sie das Kontaktformular, um Ihren Behandlungstermin zu vereinbaren.</p>
+                    <p class="text-xs text-slate-400">Rufen Sie uns gerne an oder nutzen Sie das Kontaktformular.</p>
                 </div>
             </div>
 
-            <!-- Formular -->
-            <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
-                <h3 class="text-xl font-bold text-dark-900 mb-1">Terminanfrage senden</h3>
-                <p class="text-slate-500 text-xs mb-6">Schreiben Sie uns – wir melden uns schnellstmöglich bei Ihnen.</p>
-                <form class="space-y-4">
+            <!-- MODERNE ANFRAGE-BOX (AJAX OHNE NEULADEN) -->
+            <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm relative" id="contact-container">
+                
+                <!-- Erfolgsmeldung -->
+                <div id="success-message" class="hidden text-center py-10 my-auto">
+                    <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl font-bold">✓</div>
+                    <h3 class="text-2xl font-bold text-dark-900 mb-2">Vielen Dank!</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed max-w-sm mx-auto">
+                        Ihre Anfrage wurde erfolgreich übermittelt.<br>Wir melden uns schnellstmöglich bei Ihnen.
+                    </p>
+                </div>
+
+                <!-- Das Formular -->
+                <form id="contact-form" class="space-y-4">
+                    <h3 class="text-xl font-bold text-dark-900 mb-1">Terminanfrage senden</h3>
+                    <p class="text-slate-500 text-xs mb-6">Schreiben Sie uns – wir melden uns schnellstmöglich bei Ihnen.</p>
+                    
                     <div>
                         <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Name</label>
-                        <input type="text" class="w-full px-4 py-2.5 border border-slate-300 rounded-xl focus:ring-2 focus:ring-brand-600 focus:outline-none transition text-sm" placeholder="Ihr Vor- und Nachname">
+                        <input type="text" name="name" required class="w-full px-4 py-2.5 border border-slate-300 rounded-xl focus:ring-2 focus:ring-brand-600 focus:outline-none transition text-sm" placeholder="Ihr Vor- und Nachname">
                     </div>
                     <div>
                         <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Telefon / E-Mail</label>
-                        <input type="text" class="w-full px-4 py-2.5 border border-slate-300 rounded-xl focus:ring-2 focus:ring-brand-600 focus:outline-none transition text-sm" placeholder="Wie können wir Sie am besten erreichen?">
+                        <input type="text" name="kontakt" required class="w-full px-4 py-2.5 border border-slate-300 rounded-xl focus:ring-2 focus:ring-brand-600 focus:outline-none transition text-sm" placeholder="Wie können wir Sie am besten erreichen?">
                     </div>
                     <div>
                         <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Anliegen / Wunschbehandlung</label>
-                        <textarea rows="3" class="w-full px-4 py-2.5 border border-slate-300 rounded-xl focus:ring-2 focus:ring-brand-600 focus:outline-none transition text-sm" placeholder="z. B. Osteopathie, Säuglings-Bobath, Skoliose..."></textarea>
+                        <textarea name="nachricht" rows="3" required class="w-full px-4 py-2.5 border border-slate-300 rounded-xl focus:ring-2 focus:ring-brand-600 focus:outline-none transition text-sm" placeholder="z. B. Osteopathie, Säuglings-Bobath, Skoliose..."></textarea>
                     </div>
-                    <button type="button" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-3 rounded-xl transition shadow-sm text-sm">
+
+                    <!-- DSGVO Einverständnis -->
+                    <div class="flex items-start space-x-2 pt-1">
+                        <input type="checkbox" id="dsgvo" name="dsgvo" required class="mt-1 rounded border-slate-300 text-brand-600 focus:ring-brand-600">
+                        <label for="dsgvo" class="text-xs text-slate-500 leading-tight">
+                            Ich stimme zu, dass meine Angaben zur Kontaktaufnahme und Zuordnung für eventuelle Rückfragen gespeichert werden.
+                        </label>
+                    </div>
+
+                    <button type="submit" id="submit-btn" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-3 rounded-xl transition shadow-sm text-sm mt-2">
                         Anfrage abschicken
                     </button>
+                    <p id="error-message" class="hidden text-red-600 text-xs text-center font-semibold mt-2">Fehler beim Senden. Bitte versuchen Sie es erneut oder rufen Sie uns an.</p>
                 </form>
+
+                <!-- Script zum Abschicken per AJAX -->
+                <script>
+                    document.getElementById('contact-form').addEventListener('submit', async function(e) {
+                        e.preventDefault();
+                        
+                        const btn = document.getElementById('submit-btn');
+                        const errorMsg = document.getElementById('error-message');
+                        const successMsg = document.getElementById('success-message');
+                        const form = this;
+
+                        btn.disabled = true;
+                        btn.innerText = 'Wird gesendet...';
+                        errorMsg.classList.add('hidden');
+
+                        try {
+                            const formData = new FormData(form);
+                            const response = await fetch('sendmail.php', {
+                                method: 'POST',
+                                body: formData
+                            });
+
+                            const result = await response.json();
+
+                            if (result.status === 'success') {
+                                form.classList.add('hidden');
+                                successMsg.classList.remove('hidden');
+                            } else {
+                                throw new Error('Fehler beim Senden');
+                            }
+                        } catch (err) {
+                            btn.disabled = false;
+                            btn.innerText = 'Anfrage abschicken';
+                            errorMsg.classList.remove('hidden');
+                        }
+                    });
+                </script>
             </div>
         </div>
     </section>
 
-    <!-- Footer mit Rechtstexten -->
-    <footer class="bg-white border-t border-slate-200 py-6 text-center text-slate-500 text-xs">
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-6 text-center text-slate-500 text-xs mt-auto">
         <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4 font-medium">
             <p>© 2026 REAKTIV KUHL – Praxis für Physiotherapie und Osteopathie, Meppen.</p>
             <div class="space-x-6">
-                <a href="impressum.html" class="hover:text-brand-600 transition underline decoration-slate-300 underline-offset-4">Impressum</a>
-                <a href="datenschutz.html" class="hover:text-brand-600 transition underline decoration-slate-300 underline-offset-4">Datenschutz</a>
+                <button onclick="openModal('modal-impressum')" class="hover:text-brand-600 transition underline decoration-slate-300 underline-offset-4">Impressum</button>
+                <button onclick="openModal('modal-datenschutz')" class="hover:text-brand-600 transition underline decoration-slate-300 underline-offset-4">Datenschutz</button>
             </div>
         </div>
     </footer>
 
+    <!-- DYNAMISCHER SIDE-DRAWER -->
+    <div id="drawer-backdrop" onclick="closeDrawer()" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-50 hidden transition-opacity duration-300 opacity-0"></div>
+
+    <aside id="drawer" class="fixed top-0 right-0 z-50 w-full sm:w-[500px] md:w-[600px] h-full bg-white shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
+        <!-- Drawer Header -->
+        <div class="p-4 md:p-6 border-b border-slate-200 flex justify-between items-center bg-slate-50 shrink-0">
+            <span class="text-xs font-bold text-brand-600 uppercase tracking-wider">Leistungsdetails</span>
+            <button onclick="closeDrawer()" class="p-2 text-slate-400 hover:text-slate-800 rounded-lg transition text-xl font-bold">&times;</button>
+        </div>
+
+        <!-- Drawer Content -->
+        <div id="drawer-content" class="p-6 md:p-8 overflow-y-auto flex-1 prose prose-slate max-w-none">
+            <!-- Spinner -->
+            <div id="drawer-loading" class="hidden flex flex-col items-center justify-center py-12 text-slate-400">
+                <div class="w-8 h-8 border-4 border-brand-600 border-t-transparent rounded-full animate-spin mb-3"></div>
+                <p class="text-xs font-medium">Inhalt wird geladen...</p>
+            </div>
+            <div id="drawer-body"></div>
+        </div>
+
+        <!-- Drawer Footer -->
+        <div class="p-4 md:p-6 border-t border-slate-200 bg-slate-50 shrink-0 flex items-center justify-between">
+            <a id="drawer-direct-link" href="#" class="text-xs text-slate-500 hover:text-brand-600 underline">Als eigene Seite öffnen ↗</a>
+            <button onclick="closeDrawer()" class="bg-slate-800 hover:bg-slate-900 text-white text-xs font-semibold px-5 py-2.5 rounded-xl transition">Schließen</button>
+        </div>
+    </aside>
+
+    <!-- MODAL: IMPRESSUM -->
+    <div id="modal-impressum" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[85vh] flex flex-col shadow-2xl overflow-hidden">
+            <div class="p-5 border-b border-slate-100 flex justify-between items-center bg-slate-50">
+                <h3 class="font-bold text-dark-900 text-lg">Impressum</h3>
+                <button onclick="closeModal('modal-impressum')" class="text-slate-400 hover:text-dark-900 text-2xl leading-none">&times;</button>
+            </div>
+            <div class="p-6 overflow-y-auto text-sm text-slate-600 space-y-4">
+                <p><strong>Angaben gemäß § 5 TMG / Verantwortlich für den Inhalt:</strong></p>
+                <p>
+                    <strong>REAKTIV KUHL</strong><br>
+                    Praxis für Physiotherapie und Osteopathie<br>
+                    Inhaber: Ulrich Kuhl &amp; Ruth Kuhl<br>
+                    Sophienplatz 25<br>
+                    49716 Meppen
+                </p>
+                <p>
+                    <strong>Kontakt:</strong><br>
+                    Telefon: 05931 / 84 76 76 5<br>
+                    Mobil: 0160 / 188 40 68<br>
+                    E-Mail: info@reaktiv-kuhl.de
+                </p>
+                <p>
+                    <strong>Berufsbezeichnungen:</strong><br>
+                    Physiotherapeut / Physiotherapeutin (verliehen in der Bundesrepublik Deutschland)<br>
+                    Heilpraktiker / Osteopathie
+                </p>
+                <p>
+                    <strong>Aufsichtsbehörde:</strong><br>
+                    Gesundheitsamt Landkreis Emsland<br>
+                    Orderberger Straße 14, 49716 Meppen
+                </p>
+            </div>
+            <div class="p-4 border-t border-slate-100 bg-slate-50 text-right">
+                <button onclick="closeModal('modal-impressum')" class="bg-slate-200 hover:bg-slate-300 text-slate-800 font-semibold px-5 py-2 rounded-xl text-xs transition">Schließen</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: DATENSCHUTZ -->
+    <div id="modal-datenschutz" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[85vh] flex flex-col shadow-2xl overflow-hidden">
+            <div class="p-5 border-b border-slate-100 flex justify-between items-center bg-slate-50">
+                <h3 class="font-bold text-dark-900 text-lg">Datenschutzerklärung</h3>
+                <button onclick="closeModal('modal-datenschutz')" class="text-slate-400 hover:text-dark-900 text-2xl leading-none">&times;</button>
+            </div>
+            <div class="p-6 overflow-y-auto text-sm text-slate-600 space-y-4">
+                <h4 class="font-bold text-dark-900">1. Datenschutz auf einen Blick</h4>
+                <p>Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.</p>
+                
+                <h4 class="font-bold text-dark-900">2. Datenerfassung auf unserer Website</h4>
+                <p><strong>Kontaktformular:</strong> Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p>
+                
+                <h4 class="font-bold text-dark-900">3. Ihre Rechte</h4>
+                <p>Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung sowie ein Recht auf Berichtigung oder Löschung dieser Daten. Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten können Sie sich jederzeit unter der im Impressum angegebenen Adresse an uns wenden.</p>
+            </div>
+            <div class="p-4 border-t border-slate-100 bg-slate-50 text-right">
+                <button onclick="closeModal('modal-datenschutz')" class="bg-slate-200 hover:bg-slate-300 text-slate-800 font-semibold px-5 py-2 rounded-xl text-xs transition">Schließen</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT SYSTEM STEUERUNG -->
+    <script>
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Modals (Impressum / Datenschutz)
+        function openModal(id) {
+            document.getElementById(id).classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        // Side-Drawer mit dynamic fetch
+        async function openDrawer(url) {
+            const drawer = document.getElementById('drawer');
+            const backdrop = document.getElementById('drawer-backdrop');
+            const body = document.getElementById('drawer-body');
+            const loading = document.getElementById('drawer-loading');
+            const directLink = document.getElementById('drawer-direct-link');
+
+            backdrop.classList.remove('hidden');
+            setTimeout(() => backdrop.classList.remove('opacity-0'), 10);
+            drawer.classList.remove('translate-x-full');
+            document.body.classList.add('overflow-hidden');
+
+            directLink.href = url;
+            body.innerHTML = '';
+            loading.classList.remove('hidden');
+
+            try {
+                const response = await fetch(url);
+                if (!response.ok) throw new Error('Seite konnte nicht geladen werden.');
+                
+                const htmlText = await response.text();
+                
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(htmlText, 'text/html');
+                
+                // Extrahiert den Inhalt aus <main>, <article> oder <body> der Zielseite
+                const content = doc.querySelector('main') || doc.querySelector('article') || doc.body;
+
+                loading.classList.add('hidden');
+                body.innerHTML = content.innerHTML;
+
+            } catch (error) {
+                loading.classList.add('hidden');
+                body.innerHTML = `<div class="p-4 bg-red-50 text-red-700 rounded-xl text-sm">Der Inhalt konnte leider nicht geladen werden. Sie können die Seite direkt aufrufen: <a href="${url}" class="underline font-bold">Inhalt öffnen</a></div>`;
+            }
+        }
+
+        function closeDrawer() {
+            const drawer = document.getElementById('drawer');
+            const backdrop = document.getElementById('drawer-backdrop');
+
+            drawer.classList.add('translate-x-full');
+            backdrop.classList.add('opacity-0');
+
+            setTimeout(() => {
+                backdrop.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+            }, 300);
+        }
+    </script>
 </body>
 </html>
